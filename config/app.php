@@ -161,7 +161,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        DoubleC\LaravelShopifyServiceProvider::class,
 
         /*
          * Package Service Providers...
