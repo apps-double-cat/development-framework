@@ -40,7 +40,10 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "DoubleC\\LaravelShopify\\": "packages/doublec/laravel-shopify/src"
-        }
+        },
+        "files": [
+            "packages/doublec/laravel-shopify/src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
