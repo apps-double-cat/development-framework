@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DevelopmentController::class, 'index']);
+Route:: middleware(['double-c-shop-auth'])->group(function () {
+    Route::get('/', [DevelopmentController::class, 'index']);
+});
