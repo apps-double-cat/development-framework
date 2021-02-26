@@ -7,6 +7,11 @@ body {
     background-color: $background;
 }
 
+/**
+ * |-------------------
+ * |-------------------
+ * HEADER
+ */
 .doubleC-main-session {
     .brand-logo {
         width: auto;
@@ -106,6 +111,68 @@ body {
         .install-container {
             max-width: 540px;
         }
+    }
+}
+
+/**
+ * |-------------------
+ * |-------------------
+ * Container
+ */
+.doubleC-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+    .doubleC-container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) {
+    .doubleC-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    .doubleC-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px) {
+    .doubleC-container {
+        max-width: 540px;
+    }
+}
+
+/**
+ * |-------------------
+ * |-------------------
+ * Component
+ */
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #595e66;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    &.alert-danger {
+        background-color: #fcedea;
+        border-color: #f8d5ce;
+    }
+
+    &.alert-info {
+        background-color: #bdecf5;
+        border-color: #92edfd;
     }
 }
 
