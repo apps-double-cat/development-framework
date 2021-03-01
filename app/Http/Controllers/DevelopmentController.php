@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DoubleC\LaravelShopify\Facades\ShopSetting;
 use DoubleC\LaravelShopify\Traits\InstalledShop;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
