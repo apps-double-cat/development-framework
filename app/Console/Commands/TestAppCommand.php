@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use DoubleC\LaravelShopify\Models\Shop;
+use DoubleC\LaravelShopify\Repositories\ShopRepository\ShopRepository;
 use Illuminate\Console\Command;
 
 class TestAppCommand extends Command
