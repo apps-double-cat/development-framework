@@ -1,97 +1,86 @@
 body {
     background-color: #1a202c;
-    font-family: "Open Sans", sans-serif;
+    font-family: Roboto, monospace;
+}
+
+.app-title {
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-family: monospace;
 }
 
 .card {
     background-color: #fff;
-    border-radius: 0;
+    border-radius: 6px;
+    min-height: 500px;
 }
 
-.card-header {
+.card-header, .card-body, .card-footer {
     border-color: #fff;
     background-color: #fff;
 }
 
-.card-header h2 {
-    font-size: 2rem;
+.price-container {
+    border: 1px solid #ccc;
+    border-right: none;
+    border-left: none;
+}
+
+.plan-name {
+    font-size: 20px;
     letter-spacing: 2px;
-    padding: 0.9em 0.9em 0.6em;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-weight: normal;
     margin-top: 5px;
     text-transform: uppercase;
     text-align: left;
-    color: #173d50;
+    color: #637381;
 }
 
-.card-header .price {
-    text-align: center;
-}
-
-.card-header .price .currency {
-    display: inline-block;
-    margin-top: 10px;
-    vertical-align: top;
+.price {
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto, monospace;
+    text-align: left;
     font-size: 2rem;
-    font-weight: 700;
-    color: #1bbc9d;
+    color: #212b35;
 }
 
-.card-header .price .value {
-    font-size: 5rem;
-    font-weight: 300;
-}
-
-.card-header .price .duration {
-    color: #1bbc9d;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-.card-header .price .duration::before {
-    content: '/';
-    margin-right: 2px;
-}
-
-.card-body ul {
-    width: 70%;
+ul {
+    width: 100%;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+    margin-left: 0;
+    padding-left: 0 !important;
 }
 
-.card-body ul li {
+ul li {
     text-align: left;
     float: none;
     width: auto;
-    padding: .8em;
+    padding: .8em .8em .8em 0;
     font-size: 1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.card-body ul li i {
-    margin-right: 10px;
-    color: #ccc;
+ul li img {
+    width: 32px;
+    height: auto;
+    padding-right: 10px;
 }
 
-.card-body .subscription-btn {
+.subscription-btn {
     display: block;
-    margin: 30px auto;
+    margin: 30px auto 5px;
     border-radius: 8px;
     font-size: 17px;
     text-indent: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all .6s;
-    width: 70%;
+    width: 100%;
     color: #1bbc9d;
-    padding: 1em 2em;
+    padding: 10px 0;
     border: 2px solid #1bbc9d;
 }
 
@@ -100,16 +89,8 @@ body {
     color: #ffffff;
 }
 
-.current-plan {
-    border: 3px solid #1bbc9d !important;
-}
-
-.current-plan .card-header h2::after {
-    content: " - Current";
-    color: #1bbc9d;
-}
-
-.current-plan .subscription-btn {
-    background-color: #1bbc9d;
-    color: #fff;
+.current-version .subscription-btn {
+    color: #ffffff;
+    border: none;
+    background-color: #58b44b;
 }
