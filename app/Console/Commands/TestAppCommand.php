@@ -11,5 +11,6 @@ class TestAppCommand extends Command
 
     public function handle(): void
     {
+        dc_slack()->error("```Test color```");
     }
 }
