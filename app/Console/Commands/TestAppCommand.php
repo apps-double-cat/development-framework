@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Exception;
 use Illuminate\Console\Command;
 
 class TestAppCommand extends Command
@@ -11,6 +12,11 @@ class TestAppCommand extends Command
 
     public function handle(): void
     {
-        dc_slack()->error("```Test color```");
+        try {
+            $a = [8];
+            logger($a[10]);
+        } catch (Exception $exception) {
+            dc_slack()->error($exception->getMessage());
+        }
     }
 }
