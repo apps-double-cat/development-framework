@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         \DoubleC\LaravelShopify\LaravelShopifyServiceProvider::class,
+        \DoubleC\LaravelServiceRepository\ServiceRepositoryProvider::class,
         /*
          * Package Service Providers...
          */

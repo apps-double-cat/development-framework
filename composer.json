@@ -41,7 +41,8 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "DoubleC\\LaravelShopify\\": "packages/doublec/laravel-shopify/src"
+            "DoubleC\\LaravelShopify\\": "packages/doublec/laravel-shopify/src",
+            "DoubleC\\LaravelServiceRepository\\": "packages/doublec/laravel-service-repository/src"
         },
         "files": [
             "packages/doublec/laravel-shopify/src/helpers.php"
@@ -57,7 +58,9 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan doublec:install-framework",
+            "@php artisan doublec:install-laravel-service-repository"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

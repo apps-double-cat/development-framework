@@ -4,7 +4,9 @@ namespace App\Console\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\File;
 use stdClass;
+use Symfony\Component\Finder\SplFileInfo;
 
 class TestAppCommand extends Command
 {
@@ -13,6 +15,5 @@ class TestAppCommand extends Command
 
     public function handle(): void
     {
-        dc_slack()->debug('message: ddd');
     }
 }
