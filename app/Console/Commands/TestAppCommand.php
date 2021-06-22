@@ -2,18 +2,20 @@
 
 namespace App\Console\Commands;
 
-use Exception;
+use DoubleC\LaravelShopify\Services\SettingService\SettingService;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
-use stdClass;
-use Symfony\Component\Finder\SplFileInfo;
+use JetBrains\PhpStorm\NoReturn;
 
 class TestAppCommand extends Command
 {
     protected $signature = 'app:test';
     protected $description = 'Command description';
 
+    #[NoReturn]
     public function handle(): void
     {
+        /** @var SettingService $settingService */
+        $settingService = app(SettingService::class);
+        dd($settingService->all(shop_id: 1));
     }
 }
