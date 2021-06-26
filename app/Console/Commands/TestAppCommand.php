@@ -2,7 +2,8 @@
 
 namespace App\Console\Commands;
 
-use DoubleC\LaravelShopify\Services\SettingService\SettingService;
+use DoubleC\LaravelShopify\Models\Shop;
+use DoubleC\LaravelShopify\Shopify\Resource\AdminApi\OnlineStore\Asset;
 use Illuminate\Console\Command;
 use JetBrains\PhpStorm\NoReturn;
 
@@ -14,8 +15,8 @@ class TestAppCommand extends Command
     #[NoReturn]
     public function handle(): void
     {
-        /** @var SettingService $settingService */
-        $settingService = app(SettingService::class);
-        dd($settingService->all(shop_id: 1));
+        $shop = Shop::find(2);
+        $api = new Asset(generateClientApi($shop));
+        dd($api->get(119365664936, 'layout/theme.liquid'));
     }
 }
