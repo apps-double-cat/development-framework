@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
-use App\Events\AppUninstalledEvent;
 use App\Listeners\AppInstalledListener;
 use App\Listeners\AppUninstalledListener;
+use App\Listeners\ShopUpdatedListener;
 use DoubleC\LaravelShopify\Events\AppInstalledEvent;
+use DoubleC\LaravelShopify\Events\AppUninstalledEvent;
+use DoubleC\LaravelShopify\Events\ShopUpdatedEvent;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -26,6 +28,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         AppUninstalledEvent::class => [
             AppUninstalledListener::class
+        ],
+        ShopUpdatedEvent::class => [
+            ShopUpdatedListener::class
         ]
     ];
 
