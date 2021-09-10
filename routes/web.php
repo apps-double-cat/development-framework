@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route:: middleware(['double-c-shop-auth', 'double-c-activate-shop'])->group(function () {
     Route::get('/', [DevelopmentController::class, 'index']);
 });
+Route::get('/plans', function (){
+    dd('register plan first');
+});
