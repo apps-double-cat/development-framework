@@ -9,7 +9,7 @@ return [
     'shared_secret'             => env('SHOPIFY_SHARED_SECRET'),
     'redirect_url'              => env('SHOPIFY_REDIRECT_URL'),
     'permissions'               => [env('SHOPIFY_PERMISSIONS')],
-    'api_version'               => '2020-01',
+    'api_version'               => '2021-07',
     'app_url'                   => env('APP_URL'),
     'shopify_sudo_store'        => array_map(fn($store) => trim($store), explode(',', env('SHOPIFY_SUDO_STORE'))),
     'activated_redirect_link'   => '/',
