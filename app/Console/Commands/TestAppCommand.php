@@ -14,7 +14,5 @@ class TestAppCommand extends Command
     #[NoReturn]
     public function handle(): void
     {
-        $shop = Shop::find(2);
-        dd($shop->access_token);
     }
 }
